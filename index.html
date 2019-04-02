@@ -7,13 +7,17 @@
 </head>
 <body>
 <div class="rectangle">
-  <label>宽度：</label>
-  <input id="width" type="text">
-  <br>
-  <label>高度：</label>
-  <input id="height" type="text">
-  <br>
-  <input type="button" value="计算" id="calcute">
+  <form>
+    <label>宽度：</label>
+    <input id="width" type="number" min="0.01" autofocus required step="0.01">
+    <span></span>
+    <br>
+    <label>高度：</label>
+    <input id="height" type="number" min="0.01" required step="0.01">
+    <span></span>
+    <br>
+    <input type="submit" value="计算" id="calcute">
+  </form>
   <br>
   <label>周长：</label>
   <input id="perimeter" type="text">

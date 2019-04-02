@@ -1,6 +1,7 @@
 $(function() {
-  var $width=$('#width'),$height=$('#height'),$btnCal=$('#calcute'),$perimeter=$('#perimeter'),$area=$('#area');
-  $btnCal.click(function(){
+  var $width=$('#width'),$height=$('#height'),$form=$('form'),$perimeter=$('#perimeter'),$area=$('#area');
+  $form.submit(function(e){
+    e.preventDefault();         // 阻止表单提交
     var w=Number($width.val()),
         h=Number($height.val());
     var p=2*(w+h),
@@ -8,4 +9,5 @@ $(function() {
     $perimeter.val(p);
     $area.val(a);
   });
+
 });
